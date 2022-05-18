@@ -79,13 +79,39 @@ input[type="search"]{
     gap: 20px;
     grid-auto-rows: min-content;
     overflow: auto;
+    
 }
 .card{
     background-color: var(--header);
     border-radius: 10px;
-    border-left: solid 5px var(--sidebar);
+    border-left: solid 10px var(--sidebar);
     height: 300px;
     box-shadow: 2px 2px 4px 1px lightgrey;
+    display: flex;
+}
+.card-content{
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.btn-container{
+    align-self: flex-end;
+    display: flex;
+    gap: 10px;
+}
+.btn-container img{
+    transition: transform 0.8s ease-in-out;
+}
+.btn-container img:hover{
+    
+    transform: rotate(360deg) scale(1.2);
+}
+.card-title .title{
+    font-weight: 600;
+    font-size: 18px;
 }
 
 .right{
@@ -103,14 +129,21 @@ input[type="search"]{
 
 .announcements,
 .trending{
-
     flex: 1;
     background-color: var(--header);
     border-radius: 10px;
     box-shadow: 2px 2px 4px 1px lightgrey;
-   
+    padding: 20px;
 }
-
+.announcement-item .title{
+    font-weight: 600;
+    font-size: 15px;
+}
+.announcement-item{
+   
+    overflow: hidden;
+    font-size: 13px;
+}
 
 
 
@@ -126,7 +159,7 @@ input[type="search"]{
 .title-wrapper .title{
     display: flex;
     align-items: center;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 600;
     gap: 4px;
     padding-left: 5px;
@@ -135,6 +168,7 @@ input[type="search"]{
 
 li{
     list-style: none;
+    font-size: 20px;
 }
 ul{
     padding: 0;
@@ -145,7 +179,7 @@ ul{
     padding-left: 5px;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 10px;
 }
 .list-wrapper li{
     font-weight: 600;
@@ -153,7 +187,12 @@ ul{
     align-items: center;
     gap: 10px;
 }
-
+.sidebar-list-wrappers{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
 ::-webkit-scrollbar{
     
     display: none;
