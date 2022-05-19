@@ -18,13 +18,15 @@ body{
 }
 
 .header{
-    position: sticky;
-    top: 0;
     background-color: var(--header);
     grid-column: 2/3;
     grid-row: 1/2;
     display: grid;    
     grid-template-columns: 2fr 1fr;
+    padding:20px;
+    position: relative;
+    
+    box-shadow: 0 10px 15px -15px black;
 }
 
 .profile{
@@ -51,10 +53,13 @@ body{
 .buttons button{
     border: none;
     background-color: var(--sidebar);
-    width: 70px;
-    height: 30px;
-    border-radius: 15px;
+    width: 120px;
+    height: 50px;
+    border-radius: 25px;
     transition: 0.4s;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
 }
 
 button:hover{
@@ -80,10 +85,10 @@ button:hover{
 input[type="search"]{
     border: none;
     background-color: var(--main);
-    border-radius: 12px;
+    border-radius: 15px;
     min-width: 80%;
     max-width: 900px;
-    height: 24px;
+    height: 32px;
 }
 
 .greeting{
@@ -112,7 +117,8 @@ input[type="search"]{
     background-color: var(--main);
     grid-column: 2/3;
     grid-row: 2/5;
-    display: grid;   
+    display: grid;
+    overflow: auto;   
 }
 
 .project-wrapper{
@@ -127,7 +133,6 @@ input[type="search"]{
         repeat(auto-fit,minmax(300px,1fr));
     gap: 20px;
     grid-auto-rows: min-content;
-    overflow: auto;
 }
 
 .card{
